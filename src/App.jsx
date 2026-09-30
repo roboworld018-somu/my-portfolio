@@ -10,6 +10,27 @@ const projects = [
     github: "#",
     demo: "#",
   },
+
+  {
+    title: "Smart SOS Auto-Dimming Light System",
+    type: "IoT / Embedded Systems",
+    description:
+      "A smart lighting system designed with SOS functionality and automatic dimming to improve safety, automation and energy efficiency.",
+    tags: ["Arduino", "Sensors", "IoT", "Embedded"],
+    github: "#",
+    demo: "https://www.image2url.com/r2/default/videos/1790770690811-9b0fbea5-4d43-434c-b65e-b0c8836ba58c.mp4",
+  },
+
+  {
+    title: "LDR Sensor Security Alarm",
+    type: "Embedded Systems",
+    description:
+      "A real-time security alarm system built using an LDR sensor and Arduino Uno to detect changes in light conditions and trigger an alarm response.",
+    tags: ["Arduino Uno", "LDR", "Sensors", "Embedded"],
+    github: "#",
+    demo: "https://www.image2url.com/r2/default/videos/1790770810251-a9406bf7-f6b6-41a2-b5ce-799064db43ea.mp4",
+  },
+
   {
     title: "DSA Practice",
     type: "C Programming",
@@ -19,11 +40,12 @@ const projects = [
     github: "#",
     demo: "#",
   },
+
   {
     title: "Personal Portfolio",
     type: "Web Development",
     description:
-      "A responsive personal portfolio website built to showcase my skills, projects, achievements and learning journey.",
+      "A responsive personal portfolio website built with React to showcase my skills, projects, achievements and learning journey.",
     tags: ["React", "JavaScript", "CSS", "Vite"],
     github: "#",
     demo: "#",
@@ -33,18 +55,22 @@ const projects = [
 const skills = [
   "C",
   "Python",
-  "C++",
   "JavaScript",
   "HTML",
   "CSS",
   "React",
+  "Vite",
   "FastAPI",
-  "Git",
-  "GitHub",
+  "Arduino",
   "RAG",
   "Gemini API",
   "ChromaDB",
+  "Git",
+  "GitHub",
+  "VS Code",
 ];
+
+const currentlyLearning = ["C++", "DSA", "AI/RAG"];
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,10 +81,11 @@ function App() {
 
   return (
     <div className="site">
-      {/* NAVBAR */}
+      {/* ================= NAVBAR ================= */}
       <header className="navbar">
         <a href="#home" className="brand" onClick={closeMenu}>
           <span className="brand-dot">B</span>
+
           <span>
             Bidyut<span className="accent">.</span>
           </span>
@@ -67,6 +94,7 @@ function App() {
         <button
           className="menu-btn"
           aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
@@ -104,7 +132,7 @@ function App() {
       </header>
 
       <main>
-        {/* HERO */}
+        {/* ================= HERO ================= */}
         <section id="home" className="hero section">
           <div className="hero-copy">
             <p className="eyebrow">HELLO, I'M</p>
@@ -117,7 +145,7 @@ function App() {
 
             <p className="hero-text">
               I enjoy building useful technology, learning by doing,
-              and turning ideas into real projects.
+              and turning ideas into real-world projects.
             </p>
 
             <div className="hero-actions">
@@ -132,7 +160,7 @@ function App() {
 
             <div className="quick-links">
               <a
-                href="https://github.com/"
+                href="https://github.com/roboworld018-somu"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -140,14 +168,14 @@ function App() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/bidyut-mondal-6591893b2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                href="https://www.linkedin.com/in/bidyut-mondal-6591893b2"
                 target="_blank"
                 rel="noreferrer"
               >
                 LinkedIn ↗
               </a>
 
-              <a href="mailto:biyutm162@gmail.com" target="_blank" rel="noreferrer">
+              <a href="mailto:bidyutm162@gmail.com">
                 Email ↗
               </a>
             </div>
@@ -176,7 +204,7 @@ function App() {
           </div>
         </section>
 
-        {/* ABOUT */}
+        {/* ================= ABOUT ================= */}
         <section id="about" className="section">
           <div className="section-heading">
             <span>01</span>
@@ -195,21 +223,22 @@ function App() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                I am a Computer Science student interested in
-                software development, artificial intelligence
-                and problem-solving.
+                I am a Computer Science and Engineering student
+                interested in software development, artificial
+                intelligence and problem-solving.
               </p>
 
               <p>
                 I learn best by building projects, participating
                 in hackathons, exploring new technologies and
-                improving my fundamentals step by step.
+                strengthening my fundamentals step by step.
               </p>
 
               <p>
-                My current focus is strengthening my programming,
-                web development, DSA and AI/RAG skills while
-                creating projects that solve practical problems.
+                My current focus is on software development,
+                web development, DSA and AI/RAG technologies
+                while creating projects that solve practical
+                problems.
               </p>
             </div>
 
@@ -226,7 +255,7 @@ function App() {
 
               <div>
                 <span>Currently Learning</span>
-                <strong>React • Python • RAG</strong>
+                <strong>C++ • DSA • AI/RAG</strong>
               </div>
 
               <div>
@@ -237,7 +266,7 @@ function App() {
           </div>
         </section>
 
-        {/* SKILLS */}
+        {/* ================= SKILLS ================= */}
         <section id="skills" className="section muted">
           <div className="section-heading">
             <span>02</span>
@@ -256,9 +285,22 @@ function App() {
               </div>
             ))}
           </div>
+
+          {/* CURRENTLY LEARNING */}
+          <div className="learning-box">
+            <p className="eyebrow">CURRENTLY LEARNING</p>
+
+            <div className="skill-grid">
+              {currentlyLearning.map((skill) => (
+                <div className="skill learning" key={skill}>
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
-        {/* PROJECTS */}
+        {/* ================= PROJECTS ================= */}
         <section id="projects" className="section">
           <div className="section-heading">
             <span>03</span>
@@ -278,7 +320,7 @@ function App() {
               >
                 <div className="project-top">
                   <span className="project-number">
-                    0{index + 1}
+                    {String(index + 1).padStart(2, "0")}
                   </span>
 
                   <span className="project-type">
@@ -297,19 +339,73 @@ function App() {
                 </div>
 
                 <div className="project-links">
-                  <a href={project.github}>GitHub ↗</a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub ↗
+                  </a>
 
-                  <a href={project.demo}>Live Demo ↗</a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo ↗
+                  </a>
                 </div>
               </article>
             ))}
           </div>
         </section>
 
-        {/* ACHIEVEMENTS */}
-        <section id="achievements" className="section muted">
+        {/* ================= LEADERSHIP ================= */}
+        <section className="section leadership-section">
           <div className="section-heading">
             <span>04</span>
+
+            <div>
+              <p className="eyebrow">LEADERSHIP</p>
+
+              <h2>Teamwork & leadership.</h2>
+            </div>
+          </div>
+
+          <div className="leadership-card">
+            <div className="leadership-year">
+              2026
+            </div>
+
+            <div>
+              <p className="timeline-label">
+                SMART INDIA HACKATHON
+              </p>
+
+              <h3>
+                Team Leader — SIH Internal Hackathon
+              </h3>
+
+              <p>
+                Led the team during the development and
+                presentation of IP-SAKTI SAHAYAK, an AI/RAG-based
+                solution for Ayurveda-related intellectual
+                property and regulatory guidance.
+              </p>
+
+              <div className="tags">
+                <span>Team Leadership</span>
+                <span>AI/RAG</span>
+                <span>Project Development</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= ACHIEVEMENTS ================= */}
+        <section id="achievements" className="section muted">
+          <div className="section-heading">
+            <span>05</span>
 
             <div>
               <p className="eyebrow">ACHIEVEMENTS</p>
@@ -323,16 +419,18 @@ function App() {
               <span className="timeline-dot"></span>
 
               <div>
-                <p className="timeline-label">2026</p>
+                <p className="timeline-label">
+                  2026
+                </p>
 
                 <h3>
                   SIH Internal Hackathon — Shortlisted
                 </h3>
 
                 <p>
-                  Worked with my team on IP-SAKTI SAHAYAK,
-                  an AI-powered solution for Ayurveda IP
-                  and regulatory guidance.
+                  Worked as Team Leader with the team on
+                  IP-SAKTI SAHAYAK, an AI-powered solution
+                  for Ayurveda IP and regulatory guidance.
                 </p>
               </div>
             </div>
@@ -341,9 +439,13 @@ function App() {
               <span className="timeline-dot"></span>
 
               <div>
-                <p className="timeline-label">2026</p>
+                <p className="timeline-label">
+                  2026
+                </p>
 
-                <h3>Zero to Hackathon: Build & Break</h3>
+                <h3>
+                  Zero to Hackathon: Build & Break
+                </h3>
 
                 <p>
                   Participated in a hands-on workshop focused
@@ -357,24 +459,30 @@ function App() {
               <span className="timeline-dot"></span>
 
               <div>
-                <p className="timeline-label">Ongoing</p>
+                <p className="timeline-label">
+                  ONGOING
+                </p>
 
-                <h3>Continuous Learning</h3>
+                <h3>
+                  Continuous Learning
+                </h3>
 
                 <p>
                   Practising DSA, web development, Python,
-                  C++ and AI/RAG concepts through projects
-                  and coursework.
+                  C++, embedded systems and AI/RAG concepts
+                  through projects and coursework.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CONTACT */}
+        {/* ================= CONTACT ================= */}
         <section id="contact" className="section contact-section">
           <div className="contact-card">
-            <p className="eyebrow">05 — CONTACT</p>
+            <p className="eyebrow">
+              06 — CONTACT
+            </p>
 
             <h2>
               Let's build something
@@ -383,21 +491,19 @@ function App() {
             </h2>
 
             <p>
-              Have a project idea, internship opportunity
+              Have a project idea, internship opportunity,
               or just want to connect? Feel free to reach out.
             </p>
 
             <a
               className="btn primary"
               href="mailto:bidyutm162@gmail.com"
-              target="_blank"
-              rel="noreferrer"
             >
               Say Hello ↗
             </a>
 
             <div className="contact-details">
-              <a href="mailto:bidyutm162@gmail.com" target="_blank" rel="noreferrer">
+              <a href="mailto:bidyutm162@gmail.com">
                 bidyutm162@gmail.com
               </a>
 
@@ -410,7 +516,7 @@ function App() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/bidyut-mondal-6591893b2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                href="https://www.linkedin.com/in/bidyut-mondal-6591893b2"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -421,14 +527,16 @@ function App() {
         </section>
       </main>
 
-      {/* FOOTER */}
+      {/* ================= FOOTER ================= */}
       <footer>
         <p>
           © {new Date().getFullYear()} Bidyut Mondal.
           Built with React.
         </p>
 
-        <a href="#home">Back to top ↑</a>
+        <a href="#home">
+          Back to top ↑
+        </a>
       </footer>
     </div>
   );
