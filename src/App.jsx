@@ -402,7 +402,7 @@ function App() {
               </a>
 
               <a
-                href="https://github.com/bidyut-mondal"
+                href="https://github.com/roboworld018-somu"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -410,7 +410,7 @@ function App() {
               </a>
 
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/bidyut-mondal-6591893b2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noreferrer"
               >
