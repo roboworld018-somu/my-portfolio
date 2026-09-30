@@ -389,18 +389,20 @@ function App() {
 
             <a
               className="btn primary"
-              href="mailto:your.email@example.com"
+              href="mailto:bidyutm162@gmail.com"
+              target="_blank"
+              rel="noreferrer"
             >
               Say Hello ↗
             </a>
 
             <div className="contact-details">
-              <a href="mailto:your.email@example.com">
-                your.email@example.com
+              <a href="mailto:bidyutm162@gmail.com" target="_blank" rel="noreferrer">
+                bidyutm162@gmail.com
               </a>
 
               <a
-                href="https://github.com/"
+                href="https://github.com/bidyut-mondal"
                 target="_blank"
                 rel="noreferrer"
               >
