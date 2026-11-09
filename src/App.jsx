@@ -319,12 +319,12 @@ function App() {
               Have a project idea, internship opportunity or just want to connect?
               Feel free to reach out.
             </p>
-            <a className="btn primary" href="mailto:your.email@example.com">
+            <a className="btn primary" href="mailto:bidyutm162@gmail.com">
               Say Hello ↗
             </a>
 
             <div className="contact-details">
-              <a href="mailto:your.email@example.com">your.email@example.com</a>
+              <a href="mailto:bidyutm162@gmail.com">bidyutm162@gmail.com</a>
               <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
