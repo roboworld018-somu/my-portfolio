@@ -326,7 +326,7 @@ function App() {
             <div className="contact-details">
               <a href="mailto:bidyutm162@gmail.com">bidyutm162@gmail.com</a>
               <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/bidyut-mondal-6591893b2" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
         </section>
