@@ -131,7 +131,7 @@ function App() {
             <div className="quick-links">
               <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
               <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href="mailto:your.email@example.com">Email ↗</a>
+              <a href="mailto:bidyutm162@gmail.com">Email ↗</a>
             </div>
           </div>
 
